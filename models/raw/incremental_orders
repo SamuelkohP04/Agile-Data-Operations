@@ -1,0 +1,12 @@
+-- models/incremental_orders.sql
+
+{{ config(materialized='incremental', unique_key='ORDERID') }}
+
+SELECT
+    *
+FROM
+    RAW.PRICESMART.FRESH_ORDERS
+
+{% if is_incremental() %}
+    WHERE ORDERID > (SELECT MAX(ORDERID) FROM RAW.PRICESMART.ORDERS)
+{% endif %}
