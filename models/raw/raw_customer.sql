@@ -1,5 +1,4 @@
 {{ config (materialized='table')}}
 
-select *
-from 
-RAW.PRICESMART.CUSTOMER
+select * from
+{{  source('PRICESMART', 'CUSTOMERS') }}
