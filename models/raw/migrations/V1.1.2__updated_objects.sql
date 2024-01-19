@@ -12,3 +12,4 @@ ALTER TABLE ORDERS ADD COLUMN DISCOUNT(5,2);
 
 -- Log script execution end
 PRINT 'Script execution completed successfully';
+-- pushing again for auto workflow
