@@ -3,14 +3,14 @@
 
 USE SCHEMA PRICESMART;
 
--- Log before ALTER TABLE statement
---PRINT 'Adding column DISCOUNT to table ORDERS';
+-- Log before CREATE OR REPLACE TABLE statement
+--PRINT 'Creating or replacing table ORDERS';
 
-ALTER TABLE ORDERS ADD COLUMN DISCOUNT DECIMAL(5,2);
-
--- precision of 5, and a scale of 2
--- decimal function allows a specific data type and precision
+CREATE OR REPLACE TABLE ORDERS AS
+SELECT
+  *,
+  NULL AS DISCOUNT  -- Add the new column with default value
+FROM ORDERS;
 
 -- Log script execution end
 --PRINT 'Script execution completed successfully';
--- pushing again for auto workflow
