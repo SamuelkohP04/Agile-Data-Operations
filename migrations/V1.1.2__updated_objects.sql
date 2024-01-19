@@ -6,6 +6,7 @@ USE SCHEMA PRICESMART;
 -- Log before CREATE OR REPLACE TABLE statement
 --PRINT 'Creating or replacing table ORDERS';
 
-ALTER TABLE ORDERS ADD COLUMN DISCOUNT(5,2);
+ALTER TABLE ORDERS ADD COLUMN DISCOUNT DECIMAL(5,2);
+
 -- Log script execution end
 --PRINT 'Script execution completed successfully';
