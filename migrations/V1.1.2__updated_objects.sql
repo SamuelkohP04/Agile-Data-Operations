@@ -10,3 +10,4 @@ ALTER TABLE ORDERS ADD COLUMN DISCOUNT DECIMAL(5,2);
 
 -- Log script execution end
 --PRINT 'Script execution completed successfully';
+ 
