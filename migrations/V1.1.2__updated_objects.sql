@@ -6,11 +6,7 @@ USE SCHEMA PRICESMART;
 -- Log before CREATE OR REPLACE TABLE statement
 --PRINT 'Creating or replacing table ORDERS';
 
-CREATE OR REPLACE TABLE ORDERS AS
-SELECT
-  *,
-  NULL AS DISCOUNT  -- Add the new column with default value
-FROM ORDERS;
+ALTER TABLE ORDERS ADD COLUMN IF NOT EXISTS DISCOUNT(5,2);
 
 -- Log script execution end
 --PRINT 'Script execution completed successfully';
